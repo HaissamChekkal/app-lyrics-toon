@@ -1,0 +1,46 @@
+<ion-view cache-view="false">
+    <ion-content>
+		<div data-tap-disabled="true" ng-model="videos">
+			<p class="message_bienvenue">Bienvenue sur Lyrics Toon, l'application de vos souvenirs. Retrouvez toutes vos chansons favorites des films d'animation Disney. </p>
+		<h1 id="accueil">Découvrez une chanson</h1>
+		<div class="col-sm-6 col-sm-offset-3">
+				<div>
+					<div class="list-group-item img_video_accueil" ng-model="videos">
+						<a ui-sref="video({ id: videos.id })">
+							<img class="img-cat" src="http://melanie-croce.fr/projets/app-back/public/images/catalog/{{ videos.id }}.jpg" />
+						</a>
+					</div>
+			</div>
+		</div>
+		<h1 id="accueil">Catégories des videos</h1>
+			<a ui-sref="favorie">
+				<button id="button0" class="button button-block button 1">
+					Vos favoris
+				</button>
+			</a>
+			<a ui-sref="categorie({tag : 'aventure' })">
+				<button id="button1" class="button button-block button 1">
+					Aventure
+				</button>
+			</a>
+			<a ui-sref="categorie({tag : 'princesse' })">
+				<button id="button2" class="button button-block button">
+					Princesse
+				</button>
+			</a>
+			<a ui-sref="categorie({tag : 'animaux' })">
+				<button id="button3" class="button button-block button">
+					Animalier
+				</button>
+			</a>
+			<a ui-sref="allvideos">
+				<button id="button4" class="button button-block button">
+					Toutes les chansons
+				</button>
+			</a>			
+		</div>
+
+		
+	<div id="footer">Tout le contenu appartient à The Walt Disney Compagny</div>		
+    </ion-content>
+</ion-view>
